@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 0dee322f6d6313c47a8babc2adc14e1f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 254506
+  packageName: UHFPS - Ultimate Horror FPS KIT (URP)
+  packageVersion: 1.4.2
+  assetPath: Assets/ThunderWire Studio/UHFPS/ThirdParty/HierarchyDecorator/Scripts/Editor/GUI/Drawers/SpaceDrawer.cs
+  uploadId: 880034
