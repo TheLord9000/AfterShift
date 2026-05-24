@@ -4,6 +4,7 @@ using UHFPS.Input;
 using UHFPS.Tools;
 using ThunderWire.Attributes;
 using Newtonsoft.Json.Linq;
+using System.Threading;
 
 namespace UHFPS.Runtime
 {
@@ -216,6 +217,15 @@ namespace UHFPS.Runtime
             CurrentDynamic?.OnDynamicOpen();
         }
 
+        public void SetOpenAndLock()
+        {
+            if (interactType == InteractType.Mouse || IsLocked || IsJammed)
+                return;
+
+            CurrentDynamic?.OnDynamicOpen();
+            Invoke(nameof(LockAfter), 0.5f);
+        }
+
         /// <summary>
         /// Set dynamic object close state.
         /// </summary>
@@ -229,6 +239,20 @@ namespace UHFPS.Runtime
                 return;
 
             CurrentDynamic?.OnDynamicClose();
+        }
+
+        public void SetCloseAndLock()
+        {
+            if (interactType == InteractType.Mouse || IsLocked || IsJammed)
+                return;
+
+            CurrentDynamic?.OnDynamicClose();
+            Invoke(nameof(LockAfter), 0.5f);
+        }
+
+        private void LockAfter()
+        {
+            SetLockedStatus(true);
         }
 
         /// <summary>

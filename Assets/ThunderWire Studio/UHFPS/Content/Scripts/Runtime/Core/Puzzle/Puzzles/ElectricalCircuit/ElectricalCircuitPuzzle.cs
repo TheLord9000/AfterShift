@@ -247,6 +247,27 @@ namespace UHFPS.Runtime
             }
         }
 
+        //public void ResetAndRandomize()
+        //{
+        //    // 1. Randomizza il blueprint
+        //    foreach (var component in ComponentsFlow)
+        //    {
+        //        component.Component = CircuitComponents[UnityEngine.Random.Range(0, CircuitComponents.Length)];
+        //        component.Rotation = UnityEngine.Random.Range(1, 4) * 90;
+        //    }
+
+        //    // 2. Ricostruisci il circuito usando ComponentsFlow
+        //    BuildCircuitRuntime(false);
+
+        //    // 3. Reset energia
+        //    RemoveAllPowerIDs();
+        //    CheckPowerStates();
+
+        //    PowerAllOutputs();
+        //    CheckAllInputs();
+        //    CheckPowerStates();
+        //}
+
         public int CoordsToIndex(Vector2Int coords)
         {
             return coords.y * Columns + coords.x;
@@ -314,5 +335,59 @@ namespace UHFPS.Runtime
             CheckAllInputs();
             CheckPowerStates();
         }
+
+        //private void BuildCircuitRuntime(bool random)
+        //{
+        //    foreach (var component in Components)
+        //    {
+        //        if (component.TryGetComponent(out Collider collider))
+        //            CollidersEnable.Remove(collider);
+        //    }
+
+        //    Components.ForEach(x => Destroy(x.gameObject));
+        //    Components.Clear();
+
+        //    float componentSize = CircuitComponents[0].ComponentMesh.sharedMesh.bounds.size.x;
+        //    componentSize *= ComponentsSize;
+        //    float panelSize = componentSize * Columns + ComponentsSpacing * (Columns - 1);
+
+        //    Vector2 localStart = new Vector2(panelSize, panelSize) / 2;
+        //    Vector2 position = localStart;
+
+        //    for (int i = 0; i < ComponentsFlow.Length; i++)
+        //    {
+        //        var component = ComponentsFlow[i];
+        //        int x = i % Columns;
+        //        int y = i / Rows;
+
+        //        GameObject componentGO = Instantiate(component.Component.gameObject, ComponentsParent);
+        //        ElectricalCircuitComponent instance = componentGO.GetComponent<ElectricalCircuitComponent>();
+
+        //        float angle = component.Rotation;
+        //        if (random)
+        //        {
+        //            System.Random rand = new System.Random();
+        //            angle = rand.Next(1, 4) * 90;
+        //        }
+
+        //        Vector2 localPos = componentGO.transform.localPosition;
+        //        localPos.x = localStart.x - (x * (componentSize + ComponentsSpacing)) - componentSize / 2;
+        //        localPos.y = localStart.y - (y * (componentSize + ComponentsSpacing)) - componentSize / 2;
+
+        //        componentGO.transform.localPosition = localPos;
+        //        componentGO.transform.localScale = Vector3.one * ComponentsSize;
+
+        //        instance.ElectricalCircuit = this;
+        //        instance.Coords = new Vector2Int(x, y);
+        //        instance.Angle = angle;
+
+        //        instance.SetComponentAngle();
+        //        instance.InitializeDirections();
+
+        //        Components.Add(instance);
+        //        if (componentGO.TryGetComponent(out Collider collider))
+        //            CollidersEnable.Add(collider);
+        //    }
+        //}
     }
 }

@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 28
-  productGUID: 00000000000000000000000000000000
+  productGUID: fe49178c2973ea04b9b0403631a58327
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: TheLord Industries
   productName: AfterShift
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -42,7 +42,7 @@ PlayerSettings:
   m_SplashScreenLogos:
   - logo: {fileID: 10404, guid: 0000000000000000f000000000000000, type: 0}
     duration: 2
-  - logo: {fileID: 21300000, guid: 35251861ea0a4a545b07d20709c5511e, type: 3}
+  - logo: {fileID: 21300000, guid: de18c4ec9217fc849b51bd4ff9119b75, type: 3}
     duration: 2
   m_VirtualRealitySplashScreen: {fileID: 0}
   defaultScreenWidth: 1920
@@ -84,7 +84,7 @@ PlayerSettings:
   androidAutoRotationBehavior: 1
   androidPredictiveBackSupport: 0
   androidApplicationEntry: 2
-  defaultIsNativeResolution: 1
+  defaultIsNativeResolution: 0
   macRetinaSupport: 1
   runInBackground: 1
   muteOtherAudioSources: 0
@@ -147,7 +147,7 @@ PlayerSettings:
   loadStoreDebugModeEnabled: 0
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
-  bundleVersion: 1.4.2
+  bundleVersion: 1.0.0
   preloadedAssets:
   - {fileID: 11400000, guid: ce68c4c37abec5347801e4204a280574, type: 2}
   metroInputSource: 0
@@ -301,7 +301,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: f93527d50d3a73646826caabf177bbd5, type: 3}
+      m_Icon: {fileID: 2800000, guid: d4aa1ecce97f7844aa6a405924bda04c, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0

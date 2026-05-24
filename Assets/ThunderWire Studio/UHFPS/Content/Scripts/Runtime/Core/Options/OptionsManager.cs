@@ -218,6 +218,7 @@ namespace UHFPS.Runtime
 
         private void ApplyResolution()
         {
+            var targetDisplay = CurrentDisplay.Value;
             int screenWidth = CurrentResolution.Value.width;
             int screenHeight = CurrentResolution.Value.height;
             var fullscreen = CurrentFullscreen.Value;
@@ -234,6 +235,9 @@ namespace UHFPS.Runtime
             {
                 Screen.fullScreenMode = fullscreen;
             }
+
+            if(CurrentDisplay.IsChanged)
+                Screen.MoveMainWindowTo(targetDisplay, Vector2Int.zero);
         }
 
         public static void ObserveOption(string name, Action<object> onChange)
