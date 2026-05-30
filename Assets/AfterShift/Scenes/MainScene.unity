@@ -2050,6 +2050,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ddc39b34b857144a9bdc90423afbb96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &581256758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 581256749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97afd5b192c15ae47877a7de244030dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AfterShift.UHFPS.DynamicObjectExtensions
+  dynamicObject: {fileID: 581256751}
+  lockDelay: 0.5
 --- !u!1001 &601323932
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2992,7 +3006,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4557683388868438461, guid: b312451e8a46f8645b27b5e5c067e339, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 581256758}
   m_SourcePrefab: {fileID: 100100000, guid: b312451e8a46f8645b27b5e5c067e339, type: 3}
 --- !u!1 &877750406
 GameObject:
@@ -8437,8 +8454,8 @@ MonoBehaviour:
   OnDisconnected:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 581256751}
-        m_TargetAssemblyTypeName: UHFPS.Runtime.DynamicObject, Assembly-CSharp
+      - m_Target: {fileID: 581256758}
+        m_TargetAssemblyTypeName: AfterShift.UHFPS.DynamicObjectExtensions, Assembly-CSharp
         m_MethodName: SetCloseAndLock
         m_Mode: 1
         m_Arguments:
