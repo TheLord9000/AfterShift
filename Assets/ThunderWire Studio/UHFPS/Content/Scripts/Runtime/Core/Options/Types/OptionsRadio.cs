@@ -35,12 +35,12 @@ namespace UHFPS.Runtime
             bool listenToChange = false;
             for (int i = 0; i < Options.Length; i++)
             {
-                Options[i].SubscribeGloc(txt =>
+                int index = i;
+                Options[index].SubscribeGloc(txt =>
                 {
                     if (!listenToChange)
                         return;
 
-                    int index = i;
                     if (RadioIndex == index)
                         RadioText.text = txt;
                 });
