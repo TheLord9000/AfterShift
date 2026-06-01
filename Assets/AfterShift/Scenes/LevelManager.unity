@@ -275,6 +275,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8361682281441100838, guid: a6d90327880ef514da0c37e51d684ce0, type: 3}
+      propertyPath: LocalizationTable
+      value: 
+      objectReference: {fileID: 11400000, guid: 0b878126374af9241a3eb6c0ddb66cce, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

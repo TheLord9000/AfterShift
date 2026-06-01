@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GameLocalizationTable
   m_EditorClassIdentifier: 
   Languages:
-  - {fileID: 11400000, guid: aed2e7fe8bbd86c43a88de2f0cfd47f9, type: 2}
+  - {fileID: 11400000, guid: 19feb369ac522004699427d321f002d5, type: 2}
   TableSheet:
   - Id: 40893112
     SectionName: input
@@ -480,6 +480,10 @@ MonoBehaviour:
       Key: title.scrap
     - Id: 38802640
       Key: description.scrap
+    - Id: 61733975
+      Key: title.brokenfuse
+    - Id: 65258765
+      Key: description.brokenfuse
   - Id: 90694169
     SectionName: tips
     SectionSheet:

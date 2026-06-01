@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c9f95753a48964ab3f7d42d4aa9f48, type: 3}
   m_Name: Object References
   m_EditorClassIdentifier: 
-  References: []
+  References:
+  - GUID: c4e03be2d5be8bf449e040a89b1e9c1a
+    Object: {fileID: 1583380992349512327, guid: c4e03be2d5be8bf449e040a89b1e9c1a, type: 3}

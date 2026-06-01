@@ -932,14 +932,6 @@ MonoBehaviour:
     SectionId: 24283221
     Key: item.description.scrap
     Value: A collection of miscellaneous metal pieces. Useful for crafting and repairs.
-  - EntryId: 61733975
-    SectionId: 24283221
-    Key: item.title.brokenfuse
-    Value: Broken Fuse
-  - EntryId: 65258765
-    SectionId: 24283221
-    Key: item.description.brokenfuse
-    Value: A broken fuse, repairable in some way
   - EntryId: 31030455
     SectionId: 90694169
     Key: tips.tip1
