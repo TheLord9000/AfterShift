@@ -849,7 +849,7 @@ GameObject:
   - component: {fileID: 5014189637477452489}
   - component: {fileID: 7534169264321061226}
   - component: {fileID: 1945339837485908929}
-  - component: {fileID: 1065931534676380297}
+  - component: {fileID: 2998618521488396845}
   m_Layer: 6
   m_Name: Puzzle_Fusebox
   m_TagString: Untagged
@@ -1075,7 +1075,7 @@ MonoBehaviour:
   OnBrokenFusesRemoved:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1065931534676380297
+--- !u!114 &2998618521488396845
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1084,57 +1084,68 @@ MonoBehaviour:
   m_GameObject: {fileID: 5683026252021731441}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44e2230d6857bf14995464535978be6b, type: 3}
+  m_Script: {fileID: 11500000, guid: b2c4a02b91c815343a7b804c2fa233ae, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UHFPS.Runtime.CustomInteractTitle
-  DynamicTitle:
-    ReflectType: 2
-    Instance: {fileID: 1945339837485908929}
-    ReflectName: Boolean ShouldInsertFuses
-    ReflectDerived: 1
-  DynamicUseTitle:
-    ReflectType: 2
-    Instance: {fileID: 1945339837485908929}
-    ReflectName: Boolean ShouldInsertFuses
-    ReflectDerived: 1
-  DynamicExamineTitle:
-    ReflectType: 0
-    Instance: {fileID: 0}
-    ReflectName: 
-    ReflectDerived: 0
-  OverrideTitle: 0
-  OverrideUseTitle: 0
-  OverrideExamineTitle: 0
-  UseTitleDynamic: 0
-  UseUseTitleDynamic: 0
-  UseExamineTitleDynamic: 0
-  Title:
-    GlocText: 
-    NormalText: 
-  TrueTitle:
-    GlocText: Inserisci
-    NormalText: 
-  FalseTitle:
-    GlocText: 
-    NormalText: 
-  UseTitle:
-    GlocText: 
-    NormalText: 
-  TrueUseTitle:
-    GlocText: Inserisci
-    NormalText: 
-  FalseUseTitle:
-    GlocText: 
-    NormalText: 
-  ExamineTitle:
-    GlocText: 
-    NormalText: 
-  TrueExamineTitle:
-    GlocText: 
-    NormalText: 
-  FalseExamineTitle:
-    GlocText: 
-    NormalText: 
+  m_EditorClassIdentifier: Assembly-CSharp::AfterShift.Runtime.ASCustomInteractTitle
+  States:
+  - StateName: Remove Broken Fuses
+    IsFallbackState: 0
+    Target: {fileID: 1945339837485908929}
+    BoolMethodName: ShouldRemoveBrokenFuses
+    InvertCondition: 0
+    DisableInteraction: 0
+    OverrideTitle: 1
+    Title:
+      GlocText: '*A'
+      NormalText: 
+    OverrideUseTitle: 1
+    UseTitle:
+      GlocText: '*B'
+      NormalText: 
+    OverrideExamineTitle: 0
+    ExamineTitle:
+      GlocText: 
+      NormalText: 
+  - StateName: Insert Fuses
+    IsFallbackState: 0
+    Target: {fileID: 1945339837485908929}
+    BoolMethodName: ShouldInsertFuses
+    InvertCondition: 0
+    DisableInteraction: 0
+    OverrideTitle: 1
+    Title:
+      GlocText: '*C'
+      NormalText: 
+    OverrideUseTitle: 1
+    UseTitle:
+      GlocText: '*D'
+      NormalText: 
+    OverrideExamineTitle: 0
+    ExamineTitle:
+      GlocText: 
+      NormalText: 
+  - StateName: Idle
+    IsFallbackState: 1
+    Target: {fileID: 1945339837485908929}
+    BoolMethodName: CanInteractWithFusebox
+    InvertCondition: 1
+    DisableInteraction: 1
+    OverrideTitle: 0
+    Title:
+      GlocText: 
+      NormalText: 
+    OverrideUseTitle: 0
+    UseTitle:
+      GlocText: 
+      NormalText: 
+    OverrideExamineTitle: 0
+    ExamineTitle:
+      GlocText: 
+      NormalText: 
+  UpdateLayerByInteractionState: 1
+  IncludeChildren: 0
+  InteractLayerName: Interact
+  DisabledLayerName: Ignore Raycast
 --- !u!1 &5915251929367609293
 GameObject:
   m_ObjectHideFlags: 0

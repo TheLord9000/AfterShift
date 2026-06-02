@@ -272,7 +272,7 @@ namespace AfterShift.Power
             if (fuse == null)
                 return;
 
-            bool visible = fuse.IsInserted || fuse.IsBroken;
+            bool visible = true;//fuse.IsInserted || fuse.IsBroken;
 
             if (fuse.FuseObject != null)
                 fuse.FuseObject.SetActive(visible);
